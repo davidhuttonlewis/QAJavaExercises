@@ -1,0 +1,33 @@
+
+public class IntermediateExercises {
+
+	public static void main(String[] args) {
+
+		System.out.println("Intermediate Exercises");
+		IntermediateExercises ex = new IntermediateExercises();
+		System.out.println(ex.ex1(18, 21));
+		System.out.println(ex.ex1(20, 18));
+		System.out.println(ex.ex1(22, 21));
+		System.out.println(ex.ex1(18, 22));
+		System.out.println(ex.ex1(22, 22));
+
+	}
+
+	int ex1(int a, int b) {
+
+		int result = 0;
+
+		if (a > b && a <= 21) {
+			result = a;
+		} else {
+			result = b;
+		}
+		if (b > a && b <= 21) {
+			result = b;
+		} else {
+			result = a;
+		}
+
+		return result;
+	}
+}

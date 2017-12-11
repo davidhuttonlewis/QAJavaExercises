@@ -1,0 +1,16 @@
+
+public class PeopleExercise {
+
+	public static void main(String[] args) {
+
+		Person Tom = new Person();
+		Person Dick = new Person();
+		Person Harry = new Person();
+		Tom.setAge(18);
+		Tom.setJob("Tinker");
+		Tom.setName("Tom");
+		
+		System.out.println(Tom.getStats());
+	}
+
+}

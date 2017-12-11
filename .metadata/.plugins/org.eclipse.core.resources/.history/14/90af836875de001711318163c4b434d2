@@ -1,0 +1,21 @@
+
+public class Exercises {
+	
+	public static void main (String[] args) {
+		
+		String message = "";
+		Exercises ex = new Exercises();
+		ex.ex1(message);
+		
+		System.out.println(message);
+		
+	}
+
+	String ex1(String passedMessage) {
+		
+		return "Hello World!";
+		
+	}
+	
+	
+}

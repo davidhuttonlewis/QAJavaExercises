@@ -1,0 +1,18 @@
+
+public class Exercises {
+	
+	public static void main (String[] args) {
+		
+		Exercises ex = new Exercises();
+		ex.ex1();
+		
+	}
+
+	void ex1() {
+		
+		System.out.println("Hello !");
+		
+	}
+	
+	
+}

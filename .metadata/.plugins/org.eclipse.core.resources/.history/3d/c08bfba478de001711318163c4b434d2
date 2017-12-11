@@ -1,0 +1,49 @@
+
+public class Exercises {
+	
+	public static void main (String[] args) {
+		
+		String message = "Hello World!";
+		Exercises ex = new Exercises();
+		ex.ex1(message);
+		System.out.println(ex.ex2());
+		System.out.println(ex.ex3(2, 3, true));
+		System.out.println(ex.ex3(3, 3, false));
+		System.out.println(ex.ex3(3, 0, false));
+		
+	}
+
+	void ex1(String message) {
+		
+		System.out.println(message);
+		
+	}
+	
+	String ex2() {
+		
+		return "Hello World!";
+	}
+	
+	int ex3(int a, int b, boolean c) {
+		
+		int returnVal = 0;
+		
+		if(c == true) {
+			returnVal = a + b;
+		}
+		if (c == false) {
+			returnVal = a * b;
+		}
+		if (a == 0) {
+			returnVal = b;
+		}
+		if (b == 0) {
+			returnVal = a;
+		}
+		
+		return returnVal;
+	}
+	
+}
+	
+

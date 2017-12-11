@@ -1,0 +1,25 @@
+
+public class Exercises {
+	
+	public static void main (String[] args) {
+		
+		String message = "Hello World!";
+		Exercises ex = new Exercises();
+		ex.ex1(message);
+		
+		System.out.println(ex.ex2(4, 6));
+		
+	}
+
+	void ex1(String message) {
+		
+		System.out.println(message);
+		
+	}
+	
+	int ex2(int a, int b) {
+		
+		return a + b;
+	}
+	
+}
