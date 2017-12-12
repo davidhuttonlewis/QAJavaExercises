@@ -1,0 +1,101 @@
+import java.util.ArrayList;
+
+public class Garage {
+
+	ArrayList<Vehicle> garageList = new ArrayList<Vehicle>();
+
+	public void stockGarage() {
+
+		Car c1 = new Car("CK12HTV", "Perguot", "107", 3);
+		Car c2 = new Car("CK13HTV", "Perguot", "107", 3);
+		Motorbike m1 = new Motorbike("HT67UJF", "Ford", "Deathmachine", 17);
+		Boat b1 = new Boat("BU356", "NTY", "bigboat", true);
+
+		garageList.add(c1);
+		garageList.add(c2);
+		garageList.add(m1);
+		garageList.add(b1);
+
+	}
+
+	public void addVehicle(Vehicle vehicle) {
+
+		garageList.add(vehicle);
+
+	}
+
+	public void removeVehicleByReg(String reg) {
+
+		int r = 0;
+		int i = 0;
+		boolean found = false;
+
+		for (Vehicle v : garageList) {
+			if (v.getReg() == reg) {
+				garageList.get(i);
+				r = i;
+				found = true;
+				break;
+			}
+
+			i++;
+
+		}
+		if (found == true)
+			garageList.remove(r);
+
+	}
+
+	public void removeVehicleByType(String type) {
+
+		int r = 0;
+		int i = 0;
+		boolean found = false;
+		int count = 0;
+
+		for (Vehicle v : garageList) {
+			if (v.getType() == type)
+				count++;
+		}
+		while (count > 0) {
+
+			for (Vehicle v : garageList) {
+				if (v.getType() == type) {
+					garageList.get(i);
+					r = i;
+					found = true;
+					break;
+				}
+
+				i++;
+
+			}
+			if (found == true)
+				garageList.remove(r);
+
+		}
+	}
+
+	public void emptyGarage() {
+	}
+
+	public int caculateBill(String reg) {
+
+		int bill = 0;
+		for (Vehicle v : garageList) {
+			if (v instanceof Car && v.getReg() == reg) {
+
+				bill += 100;
+			}
+			if (v instanceof Motorbike && v.getReg() == reg) {
+				bill += 50;
+			}
+			if (v instanceof Boat && v.getReg() == reg) {
+				bill += 500;
+			}
+		}
+
+		return bill;
+	}
+
+}

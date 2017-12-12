@@ -1,0 +1,11 @@
+
+public class Car extends Vehicle {
+
+	int numOffDoors;
+
+	public Car(String reg) {
+		this.reg = reg;
+
+	}
+
+}

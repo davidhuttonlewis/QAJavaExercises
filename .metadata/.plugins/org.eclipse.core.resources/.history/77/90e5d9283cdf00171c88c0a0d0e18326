@@ -1,0 +1,22 @@
+
+public class Boat extends Vehicle {
+
+	private boolean cabin;
+
+	public Boat(String reg, String make, String model, boolean cabin) {
+		this.type = "Boat";
+		this.reg = reg;
+		this.make = make;
+		this.model = model;
+		this.cabin = cabin;
+	}
+
+	public boolean getNumOfDoors() {
+		return this.cabin;
+	}
+
+	public String toString() {
+		return this.reg + " " + this.make + " " + this.model + " Does it have a cabin " + this.cabin;
+	}
+	
+}

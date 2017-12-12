@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+
+public class Garage {
+
+	ArrayList<Vehicle> garageList = new ArrayList<Vehicle>();
+
+	void stockGarage() {
+
+		Car c1 = new Car("CK12HTV", "Perguot", "107", 3);
+		Car c2 = new Car("CK12HTV", "Perguot", "107", 3);
+		Motorbike m1 = new Motorbike("HT67UJF", "Ford", "Deathmachine", 17);
+		Boat b1 = new Boat("BU356", "NTY", "bigboat", true);
+
+		garageList.add(c1);
+		garageList.add(c2);
+		garageList.add(m1);
+		garageList.add(b1);
+
+	}
+
+	int garageBill() {
+
+		int bill = 0;
+		for (Vehicle v : garageList) {
+			if (v instanceof Car) {
+				bill += 100;
+			}
+			if (v instanceof Motorbike) {
+				bill += 50;
+			}
+			if (v instanceof Boat) {
+				bill += 500;
+			}
+		}
+
+		return bill;
+	}
+
+}

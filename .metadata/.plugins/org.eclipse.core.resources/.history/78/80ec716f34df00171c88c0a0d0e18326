@@ -1,0 +1,15 @@
+
+public class Vehicle {
+
+	protected String reg;
+	protected String vehicleType;
+	protected String make;
+	protected String model;
+
+
+
+public String getReg() {
+	return this.reg;
+}
+
+}

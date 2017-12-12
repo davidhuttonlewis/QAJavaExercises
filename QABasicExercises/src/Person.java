@@ -5,28 +5,35 @@ public class Person {
 	private int age;
 	private String jobTitle;
 
-	public void setName(String newName) {
-		name = newName;
+	public Person(String name, int age, String jobTitle) {
+		this.name = name;
+		this.age = age;
+		this.jobTitle = jobTitle;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 
 	}
 
-	public void setAge(int newAge) {
-		age = newAge;
+	public void setAge(int age) {
+		this.age = age;
 
 	}
 
-	public void setJob(String newJob) {
-		jobTitle = newJob;
+	public void setJob(String jobTitle) {
+		this.jobTitle = jobTitle;
 
 	}
 
-	public String getStats() {
+	public String getName() {
+		return this.name;
 
-		String outPut;
+	}
 
-		outPut = name + age + jobTitle;
+	public String toString() {
 
-		return outPut;
+		return "Hi my name is " + this.name + " I'm " + this.age + " and I work as a " + this.jobTitle + "\n";
 	}
 
 }

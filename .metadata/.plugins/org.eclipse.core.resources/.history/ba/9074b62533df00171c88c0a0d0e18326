@@ -1,0 +1,10 @@
+
+public class Vehicle {
+
+	String reg;
+	String vehicleType;
+	String make;
+	String model;
+	int numOfWheels;
+
+}

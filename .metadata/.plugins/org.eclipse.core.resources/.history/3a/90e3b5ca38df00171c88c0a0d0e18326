@@ -1,0 +1,21 @@
+
+public class GarageExercise {
+
+	public static void main(String[] args) {
+
+		Car c1 = new Car("CK12HTV", "Perguot", "107", 3);
+		Car c2 = new Car("CK12HTV", "Perguot", "107", 3);
+		Motorbike m1 = new Motorbike("HT67UJF", "Ford", "Deathmachine", 17);
+
+		System.out.println(c1);
+		System.out.println(m1);
+		
+		if(c1.equals(c2)) {
+			System.out.println("both are cars");
+		}else {
+			System.out.println("both are not cars");
+		}
+		
+	}
+	
+}

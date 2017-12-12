@@ -1,0 +1,17 @@
+public class PeopleExercise {
+
+	public static void main(String[] args) {
+
+		Person Tom = new Person("Tom", 18, "Tinker");
+		Person Dick = new Person("Dick", 22, "Tailor");
+		Person Harry = new Person("Harry", 24, "soldier");
+
+		System.out.println(Tom);
+		System.out.println(Dick);
+		System.out.println(Harry);
+
+		ArrayList<Person> peopleList = new ArrayList<Person>();
+
+	}
+
+}

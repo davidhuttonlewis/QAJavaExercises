@@ -4,31 +4,25 @@ public class PeopleExercise {
 
 	public static void main(String[] args) {
 
-		Person Tom = new Person();
-		Person Dick = new Person();
-		Person Harry = new Person();
-		Tom.setAge(18);
-		Tom.setJob("Tinker");
-		Tom.setName("Tom");
+		Person tom = new Person("Tom", 18, "Tinker");
+		Person dick = new Person("Dick", 22, "Tailor");
+		Person harry = new Person("Harry", 24, "soldier");
 
-		Dick.setAge(22);
-		Dick.setJob("Talour");
-		Dick.setName("Dick");
+		System.out.println(tom);
+		System.out.println(dick);
+		System.out.println(harry);
 
-		Harry.setAge(24);
-		Harry.setJob("Solidger");
-		Harry.setName("Harry");
+		ArrayList<Person> peopleList = new ArrayList<Person>();
 
-		// System.out.println(Tom.getStats());
+		peopleList.add(tom);
+		peopleList.add(dick);
+		peopleList.add(harry);
 
-		ArrayList al = new ArrayList();
-
-		al.add(Tom);
-		al.add(Dick);
-		al.add(Harry);
-
-		for (int count : al) {
-
+		for (Person p : peopleList) {
+			// System.out.print(p);
+			if (p.getName() == "Tom") {
+				System.out.print(p);
+			}
 		}
 
 	}
