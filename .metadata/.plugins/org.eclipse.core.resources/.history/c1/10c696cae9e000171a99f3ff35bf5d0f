@@ -1,0 +1,57 @@
+import java.util.ArrayList;
+
+public class PaintWizard {
+
+	private ArrayList<Paint> listOfPaints = new ArrayList<Paint>();
+
+	public void setUpPaints() {
+
+		listOfPaints.add(new Paint("CheapoMax", 20, 19.99F, 10));
+		listOfPaints.add(new Paint("AverageJoes", 15, 17.99F, 11));
+		listOfPaints.add(new Paint("CheapoMax", 10, 12.00F, 20));
+
+	}
+
+	public float willCover(float litre, float coverage, float cost, Room room) {
+		float amount = coverage;
+
+		float leftOver;
+
+		leftOver = amount;
+
+		return leftOver;
+	}
+
+	public String willItCover(float coverage, Room room) {
+		float needs;
+		String outPut = "";
+		needs = room.getSize() * room.getCoats();
+
+		if (needs <= coverage) {
+			outPut = "This Paint will cover the Room";
+		}
+
+		return outPut;
+	}
+
+	public float printPaintCover(int i, Room room) {
+
+		float cover = willCover(listOfPaints.get(i).getAmount(), listOfPaints.get(i).getCoverage(),
+				listOfPaints.get(i).getPrice(), room);
+
+		return cover;
+	}
+
+	public float pricePreLiter(int i) {
+		float result = listOfPaints.get(i).getPrice() / listOfPaints.get(i).getAmount();
+
+		return result;
+	}
+
+	public String outPut(int i, Room room) {
+		
+		
+		return willItCover(listOfPaints.get(i).getCoverage(),room);
+	}
+	
+}

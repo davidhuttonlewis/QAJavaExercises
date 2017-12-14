@@ -2,22 +2,22 @@
 public class Paint {
 
 	private String name;
-	private int amount;
+	private float amount;
 	private float price;
-	private int cover;
+	private float cover;
 
 	public Paint(String name, int amount, float price, int cover) {
 		this.name = name;
 		this.amount = amount;
 		this.price = price;
-		this.cover = cover * cover;
+		this.cover = cover;
 	}
 
 	public String getName() {
 		return name;
 	}
 
-	public int getCover() {
+	public float getCover() {
 		return cover;
 	}
 
@@ -29,7 +29,7 @@ public class Paint {
 		this.name = name;
 	}
 
-	public int getAmount() {
+	public float getAmount() {
 		return amount;
 	}
 
@@ -43,6 +43,10 @@ public class Paint {
 
 	public void setPrice(float price) {
 		this.price = price;
+	}
+
+	public float getCoverage() {
+		return amount * cover;
 	}
 
 	public String toString() {

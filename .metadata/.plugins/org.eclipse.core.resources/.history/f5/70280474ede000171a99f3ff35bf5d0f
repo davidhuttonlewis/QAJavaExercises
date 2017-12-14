@@ -1,0 +1,60 @@
+import java.util.ArrayList;
+
+public class PaintWizard {
+
+	private ArrayList<Paint> listOfPaints = new ArrayList<Paint>();
+
+	public void setUpPaints() {
+
+		listOfPaints.add(new Paint("CheapoMax", 20, 19.99F, 10));
+		listOfPaints.add(new Paint("AverageJoes", 15, 17.99F, 11));
+		listOfPaints.add(new Paint("CheapoMax", 10, 12.00F, 20));
+
+	}
+
+	public float willCover(float litre, float coverage, float cost, Room room) {
+		float amount = coverage;
+
+		float leftOver;
+
+		leftOver = amount;
+
+		return leftOver;
+	}
+
+	public String willItCover(float coverage, Room room) {
+		float needs;
+		String outPut = "";
+		needs = room.getSize() * room.getCoats();
+
+		if (needs <= coverage) {
+			outPut = "This Paint will cover the Room";
+		}
+
+		return outPut;
+	}
+
+	public float pricePreLiter(int i) {
+		float result = listOfPaints.get(i).getPrice() / listOfPaints.get(i).getAmount();
+
+		return result;
+	}
+
+	public float wastage(float cover, float coverage, Room room) {
+
+		float needs = room.getSize() * room.getCoats();
+
+		return (coverage - needs) / cover;
+
+	}
+
+	public String outPut(int i, Room room) {
+
+		float waste = wastage(listOfPaints.get(i).getCover(), listOfPaints.get(i).getCoverage(), room);
+
+		return listOfPaints.get(i).getName() + " " + willItCover(listOfPaints.get(i).getCoverage(), room)
+				+ " \nThis will waste " + waste + " Litres " + "This leaves "
+				+ ((listOfPaints.get(i).getPrice() * waste) * 100.0) / 100.0;
+	}
+
+}

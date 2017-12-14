@@ -1,0 +1,20 @@
+
+public class PaintWizardExercise {
+
+	public static void main(String[] args) {
+
+		Room pRoom = new Room(10, 4);
+		PaintWizard pWiz = new PaintWizard();
+
+		pWiz.setUpPaints();
+
+		System.out.println(pWiz.printPaintCover(0,pRoom));
+		System.out.println(pWiz.printPaintCover(1,pRoom));
+		System.out.println(pWiz.printPaintCover(2,pRoom));
+		System.out.println(pWiz.pricePreLiter(0));
+		System.out.println(pWiz.pricePreLiter(1));
+		System.out.println(pWiz.pricePreLiter(2));
+
+	}
+
+}

@@ -1,0 +1,17 @@
+
+public class PaintWizardExercise {
+
+	public static void main(String[] args) {
+
+		PaintWizardExercise ex = new PaintWizardExercise();
+		PaintWizard pWiz = new PaintWizard();
+
+		pWiz.setUpPaints();
+
+		pWiz.printPaintCover(1);
+
+	}
+
+	
+
+}

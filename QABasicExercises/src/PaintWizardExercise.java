@@ -3,29 +3,16 @@ public class PaintWizardExercise {
 
 	public static void main(String[] args) {
 
-		PaintWizardExercise ex = new PaintWizardExercise();
+		Room pRoom = new Room(10, 4);
+		PaintWizard pWiz = new PaintWizard();
 
-		Paint p1 = new Paint("CheapoMax", 20, 19.99F, 10);
-		Paint p2 = new Paint("AverageJoes", 15, 17.99F, 11);
-		Paint p3 = new Paint("CheapoMax", 10, 12.00F, 20);
+		pWiz.setUpPaints();
 
-		System.out.println(p1);
-		System.out.println(p2);
-		System.out.println(p3);
-		ex.willCover(p1.getAmount(), p1.getCover());
-
-		System.out.println(ex.willCover(p1.getAmount(), p1.getCover()));
-		System.out.println(ex.willCover(p2.getAmount(), p2.getCover()));
-		System.out.println(ex.willCover(p3.getAmount(), p3.getCover()));
-
-	}
-
-	int willCover(int litre, int cover) {
-		int amount;
-
-		amount = litre * cover;
-
-		return amount;
+		System.out.println(pWiz.outPut(0, pRoom));
+		System.out.println(pWiz.outPut(1, pRoom));
+		System.out.println(pWiz.outPut(2, pRoom));
+		System.out.println(pWiz.leastWaste(pRoom));
+		System.out.println(pWiz.cheapestPaint());
 	}
 
 }

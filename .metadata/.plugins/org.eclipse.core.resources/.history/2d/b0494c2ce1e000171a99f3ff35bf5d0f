@@ -1,0 +1,32 @@
+
+public class Room {
+	
+	private int size;
+	private int coats;
+	
+	public Room(int size, int coats) {
+		
+		this.size = size;
+		this.coats = coats;
+		
+	}
+
+	public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
+	}
+
+	public int getCoats() {
+		return coats;
+	}
+
+	public void setCoats(int coats) {
+		this.coats = coats;
+	}
+	
+	
+
+}

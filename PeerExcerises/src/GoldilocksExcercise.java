@@ -43,7 +43,7 @@ public class GoldilocksExcercise {
 		Seat s27 = new Seat(16, 129);
 		Seat s28 = new Seat(59, 181);
 		Seat s29 = new Seat(290, 123);
-		chairs.add(new Seat(248, 132);
+		Seat s30 = new Seat(248, 132);
 
 		/*
 		 * ArrayList<Seat> chairs = new ArrayList<Seat>(); chairs.add(s1);
