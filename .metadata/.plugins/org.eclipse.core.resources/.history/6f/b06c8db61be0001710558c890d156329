@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+
+public class GoldilocksExcercise {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Goldilocks g1 = new Goldilocks(100, 80);
+		Seat s1 = new Seat(30, 50);
+		Seat s2 = new Seat(130, 75);
+		Seat s3 = new Seat(90, 60);
+		Seat s4 = new Seat(150, 85);
+		Seat s5 = new Seat(120, 70);
+		Seat s6 = new Seat(200, 200);
+		Seat s7 = new Seat(110, 100);
+
+		ArrayList<Seat> chairs = new ArrayList<Seat>();
+		chairs.add(s1);
+		chairs.add(s2);
+		chairs.add(s3);
+		chairs.add(s4);
+		chairs.add(s5);
+		chairs.add(s6);
+		chairs.add(s7);
+
+		for (int i = 0; i < chairs.size(); i++) {
+
+			if ((g1.getWeight() <= chairs.get(i).getLimit()) && (chairs.get(i).getHeat() <= g1.getTemperature())) {
+
+				System.out.println(i);
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,39 @@
+
+public class Placement {
+
+	
+	private int[] myArray = new int[100];
+	
+	public void setUpPlacement() {
+
+		
+
+		for (int i = 0; i < myArray.length; i++) {
+
+			myArray[i] = i + 1;
+
+		}
+	}
+	
+	public void printPlacement(int input) {
+		
+		for (int i = 0; i < myArray.length; i++) {
+
+			if (myArray[i] == input) {
+				i++;
+
+			}
+
+			if (myArray[i] == 1 || myArray[i] == 21) {
+				System.out.println(myArray[i] + "st");
+			}
+
+			else {
+				System.out.println(myArray[i]);
+			}
+
+		}
+		
+	}
+
+}

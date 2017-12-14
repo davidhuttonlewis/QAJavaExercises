@@ -1,0 +1,19 @@
+
+public class ExceersiesOne {
+
+	public static void main(String[] args) {
+
+		Placement p1 = new Placement();
+
+		p1.setUpPlacement();
+
+		int input = 3;
+
+		// System.out.println(p1.printPlacement(input));
+		p1.enterDogs();
+
+		p1.printPlacement(input);
+		
+		p1.winningDog(6);
+	}
+}

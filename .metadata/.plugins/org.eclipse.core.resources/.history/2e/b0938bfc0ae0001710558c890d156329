@@ -1,0 +1,19 @@
+
+public class Task1 {
+
+	public void doubleLetter(String word) {
+
+		char letter;
+		char doubleLetter;
+
+		for (int i = 0; i < word.length(); i++) {
+
+			letter = word.charAt(i);
+			doubleLetter = letter += letter;
+
+		}
+		System.out.println(doubleLetter);
+
+	}
+
+}

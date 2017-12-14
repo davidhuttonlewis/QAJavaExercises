@@ -1,0 +1,14 @@
+
+public class PaintWizardExercise {
+
+	public static void main(String[] args) {
+		
+		
+		Paint p1 = new Paint("CheapoMax", 20, 19.99, 10);
+		
+		
+		
+
+	}
+
+}

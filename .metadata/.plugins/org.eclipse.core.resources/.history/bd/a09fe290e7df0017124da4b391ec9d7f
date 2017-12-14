@@ -1,0 +1,33 @@
+
+public class ExceersiesOne {
+
+	public static void main(String[] args) {
+
+		int[] myArray = new int[100];
+
+		for (int i = 0; i < myArray.length; i++) {
+
+			myArray[i] = i + 1;
+
+		}
+
+		int input = 3;
+
+		for (int i = 0; i < myArray.length; i++) {
+
+			if (myArray[i] == input) {
+				i++;
+
+			}
+			
+			if(myArray[i] == 1 || myArray[i] == 21 ) {
+			System.out.println(myArray[i] + "st");
+			}
+		
+		else {
+			System.out.println(myArray[i]);
+		}
+
+	}
+
+}

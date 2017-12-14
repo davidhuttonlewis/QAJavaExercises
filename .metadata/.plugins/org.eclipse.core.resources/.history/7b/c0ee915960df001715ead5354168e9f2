@@ -1,0 +1,35 @@
+
+public class PaintWizardExercise {
+
+	public static void main(String[] args) {
+
+		
+		PaintWizardExercise ex = new PaintWizardExercise();
+		
+		Paint p1 = new Paint("CheapoMax", 20, 19.99F, 10);
+		Paint p2 = new Paint("AverageJoes", 15, 17.99F, 11);
+		Paint p3 = new Paint("CheapoMax", 10, 12.00F, 20);
+
+		System.out.println(p1);
+		System.out.println(p2);
+		System.out.println(p3);
+		ex.willCover(p1.getAmount(),p1.getCover());
+	
+		System.out.println(ex.willCover(p1.getAmount(),p1.getCover()));
+	
+	
+	
+	}
+	
+	
+	
+
+float willCover(int litre, int cover) {
+	int amount;
+	
+	amount = litre * cover;
+	
+	return amount;
+}
+
+}

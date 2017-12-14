@@ -1,0 +1,17 @@
+
+public class Task2 {
+
+	String filling;
+	int k;
+
+	public String getFilling(String word) {
+
+		// for (int i = 0; i < word.length(); i++) {
+
+		// System.out.println(word.indexOf("jam", k));
+
+		return filling;
+
+	}
+
+}

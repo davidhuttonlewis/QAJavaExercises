@@ -1,0 +1,15 @@
+
+public class Placement {
+
+	public void setUpPlacement() {
+
+		int[] myArray = new int[100];
+
+		for (int i = 0; i < myArray.length; i++) {
+
+			myArray[i] = i + 1;
+
+		}
+	}
+
+}
