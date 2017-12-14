@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+
+public class WorkingWithFilesExercie {
+
+	public static void main(String[] args) {
+
+		ArrayList<Person> people = new ArrayList<Person>();
+		people.add(new Person("Tom", 18, "Tinker"));
+		people.add(new Person("Dick", 22, "Tailor"));
+		people.add(new Person("Harry", 24, "soldier"));
+		people.add(new Person("James", 26, "spy"));
+		people.add(new Person("Rhys", 28, "chef"));
+
+		// TODO Auto-generated method stub
+
+	}
+
+}

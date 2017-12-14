@@ -1,0 +1,70 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class WorkingWithFilesExercie {
+
+	public static void main(String[] args) {
+
+		ArrayList<Person> people = new ArrayList<Person>();
+		people.add(new Person("Tom", 18, "Tinker"));
+		people.add(new Person("Dick", 22, "Tailor"));
+		people.add(new Person("Harry", 24, "soldier"));
+		people.add(new Person("James", 26, "spy"));
+		people.add(new Person("Rhys", 28, "chef"));
+
+		ArrayList<String> stringSplit = new ArrayList<String>();
+		
+		
+		String readBack = "";
+
+		String content = "";
+
+		for (int i = 0; i < people.size(); i++) {
+			content += people.get(i).getName() + people.get(i).getAge() + people.get(i).getJob() + "|";
+		}
+
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter("filename.txt"))) {
+
+			// String content = "This is the content to write into file\n";
+
+			bw.write(content);
+
+			// no need to close it.
+			bw.close();
+
+			System.out.println("Done");
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+
+		}
+
+		try (BufferedReader br = new BufferedReader(new FileReader("filename.txt"))) {
+
+			String sCurrentLine;
+
+			while ((sCurrentLine = br.readLine()) != null) {
+
+				readBack = sCurrentLine;
+
+				System.out.println(readBack);
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		String[] split = readBack.split("|");
+		
+		for(int i = 0; i < people.size(); i++) {
+			stringSplit.add(split[i]);
+		}
+		
+	}
+
+}

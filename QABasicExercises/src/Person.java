@@ -31,6 +31,14 @@ public class Person {
 
 	}
 
+	public int getAge() {
+		return this.age;
+	}
+
+	public String getJob() {
+		return this.jobTitle;
+	}
+
 	public String toString() {
 
 		return "Hi my name is " + this.name + " I'm " + this.age + " and I work as a " + this.jobTitle + "\n";
