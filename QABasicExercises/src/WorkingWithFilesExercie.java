@@ -21,7 +21,7 @@ public class WorkingWithFilesExercie {
 		String content = "";
 
 		for (int i = 0; i < people.size(); i++) {
-			content += people.get(i).getName() + people.get(i).getAge() + people.get(i).getJob() + "//";
+			content += people.get(i).getName() + " " + people.get(i).getAge() + " " + people.get(i).getJob() + "//";
 		}
 
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter("filename.txt"))) {

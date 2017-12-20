@@ -15,10 +15,11 @@ public class IntermediateExercises {
 		 * System.out.println(ex.ex2(1, 1, 2));
 		 */
 
-		/*
-		 * System.out.println(ex.ex3(60, false)); System.out.println(ex.ex3(95, true));
-		 * System.out.println(ex.ex3(95, false)); System.out.println(ex.ex3(55, false));
-		 */
+		System.out.println(ex.ex3(60, false));
+		System.out.println(ex.ex3(95, true));
+		System.out.println(ex.ex3(95, false));
+		System.out.println(ex.ex3(55, false));
+
 	}
 
 	int ex1(int a, int b) {

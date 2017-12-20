@@ -26,5 +26,17 @@ public class PeopleExercise {
 		}
 
 	}
-
 }
+
+/*
+ * public Person findPerson(ArrayList<Person> peopleList, String name) {
+ * 
+ * Person n = null;
+ * 
+ * for (Person p : peopleList) { // System.out.print(p); if (p.getName() ==
+ * "Tom") { n = p; } return n;
+ * 
+ * }
+ * 
+ * }}
+ */
