@@ -13,19 +13,19 @@ public class Ship {
 		this.type = type;
 
 		if (this.type.equals("patrol")) {
-			shipSize = 2;
+			this.shipSize = 2;
 		}
 		if (this.type.equals("battleship")) {
-			shipSize = 3;
+			this.shipSize = 3;
 		}
 		if (this.type.equals("submarine")) {
-			shipSize = 3;
+			this.shipSize = 3;
 		}
 		if (this.type.equals("destroyer")) {
-			shipSize = 4;
+			this.shipSize = 4;
 		}
 		if (this.type.equals("carrier")) {
-			shipSize = 5;
+			this.shipSize = 5;
 		}
 
 	}
@@ -38,54 +38,82 @@ public class Ship {
 		return destroid;
 	}
 
-	public String[][] placeShip(String[][] board, int x, int y, String p) {
+	public Boolean placeShip(String[][] board, int x, int y, String p) {
 
-		if (partsPlaced < shipSize && board[x][y] != "[ O ]") {
+		int newX;
+		int newY;
 
-			board[x][y] = "[ O ]";
+		// Put a for loop here to check that the path ahead is clear.
 
-			for (int i = 0; i < shipSize; i++) {
-				if (p.equalsIgnoreCase("n")) {
-					board[x - 1][y] = "[ O ]";
-				}
-				if (p.equalsIgnoreCase("s")) {
-					board[x + 1][y] = "[ O ]";
-				}
-				if (p.equalsIgnoreCase("e")) {
-					board[x][y + 1] = "[ O ]";
-				}
-				if (p.equalsIgnoreCase("w")) {
-					board[x][y - 1] = "[ O ]";
+		while (partsPlaced < shipSize && board[x][y] != "[ O ]") {
+
+			if (partsPlaced == 0) {
+				for (int i = 1; i < shipSize; i++) {
+					board[x][y] = "[ O ]";
+					xCords.add(x);
+					yCords.add(y);
+					partsPlaced++;
 				}
 			}
-			xCords.add(x);
-			yCords.add(y);
-			partsPlaced++;
-		}
-		if (board[x][y] == "[ O ]") {
-			// System.out.println("Can not place a part in an already occupied space");
-		}
-		if (partsPlaced == shipSize) {
-			// System.out.println("All Parts Place");
-		}
 
-		return board;
+			if (p.equalsIgnoreCase("n")) {
+				for (int i = 1; i < shipSize; i++) {
+					newX = xCords.get(i - 1);
+					board[(newX - i)][y] = "[ O ]";
+					xCords.add(newX - i);
+					yCords.add(y);
+				}
+			}
+			if (p.equalsIgnoreCase("s")) {
+				for (int i = 1; i < shipSize; i++) {
+					newX = xCords.get(i - 1);
+					board[(newX + i)][y] = "[ O ]";
+					xCords.add(newX + i);
+					yCords.add(y);
+				}
+			}
+			if (p.equalsIgnoreCase("e")) {
+				for (int i = 1; i < shipSize; i++) {
+					newY = yCords.get(i - 1);
+					board[x][(newY + i)] = "[ O ]";
+					xCords.add(x);
+					yCords.add(newY + i);
+				}
+			}
+			if (p.equalsIgnoreCase("w")) {
+				for (int i = 1; i < shipSize; i++) {
+					newY = yCords.get(i - 1);
+					board[x][(newY - i)] = "[ O ]";
+					xCords.add(x);
+					yCords.add(newY - i);
+				}
+			}
+			partsPlaced++;
+
+			if (board[x][y].equals("[ O ]")) {
+				// System.out.println("Can not place a part in an already occupied space");
+			}
+			if (partsPlaced == shipSize) {
+				// System.out.println("All Parts Place");
+			}
+		}
+		return true;
 
 	}
 
 	public boolean checkShipState(String[][] board) {
 
-		for (int i = 0; i < partsPlaced; i++) {
+		for (int i = 0; i < 1; i++) {
 
 			if (board[xCords.get(i)][yCords.get(i)] == "[ X ]") {
 
-				shipSize--;
-				if (shipSize == 0) {
+				this.shipSize--;
+				System.out.println("Hit");
+				if (this.shipSize == 0) {
 
-					destroid = true;
+					this.destroid = true;
 
 				}
-
 			}
 
 		}
