@@ -103,12 +103,14 @@ public class Ship {
 
 	public boolean checkShipState(String[][] board) {
 
-		for (int i = 0; i < 1; i++) {
+		for (int i = 0; i < xCords.size(); i++) {
 
 			if (board[xCords.get(i)][yCords.get(i)] == "[ X ]") {
 
 				this.shipSize--;
 				System.out.println("Hit");
+				this.xCords.remove(i);
+				this.yCords.remove(i);
 				if (this.shipSize == 0) {
 
 					this.destroid = true;
@@ -118,7 +120,7 @@ public class Ship {
 
 		}
 
-		return destroid;
+		return this.destroid;
 
 	}
 
